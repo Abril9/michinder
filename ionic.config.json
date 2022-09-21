@@ -1,0 +1,7 @@
+{
+  "name": "michinder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
