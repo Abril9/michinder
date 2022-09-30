@@ -8,27 +8,39 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'inicio',
+        loadChildren: () => import('../paginas/inicio/inicio.module').then(m => m.InicioPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'salir',
+        loadChildren: () => import('../paginas/login/login/login.module').then(m => m.LoginPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'perfil',
+        loadChildren: () => import('../paginas/perfil/perfil.module').then(m => m.PerfilPageModule)
+      },
+      {
+        path: 'busquedas',
+        loadChildren: () => import('../paginas/busquedas/busquedas.module').then(m => m.BusquedasPageModule)
+      },
+      {
+        path: 'encuentros',
+        loadChildren: () => import('../paginas/encuentros/encuentros.module').then( m => m.EncuentrosPageModule)
+      },
+      {
+        path: 'mispublicaciones',
+        loadChildren: () => import('../paginas/mis-publicaciones/mis-publicaciones.module').then( m => m.MisPublicacionesPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/inicio',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/inicio',
     pathMatch: 'full'
   }
 ];

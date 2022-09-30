@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Mi perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mi Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar class="avatar-cls border" slot="start">
+          <img alt="Silhouette of a person's head" src={{usuario.avatarPath}} />
+        </ion-avatar>
+        <ion-button slot="end">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+
+        <ion-card-title>
+          {{persona.usuario.usuario }}
+      </ion-card-title>
+
+      </ion-item>
+      <ion-card-subtitle>
+        <i class="icon-user"></i>
+        {{ persona.nombre }} {{ persona.apellido }}
+      </ion-card-subtitle>
+      <ion-card-subtitle *ngIf="personatelefono">
+        <i class="icon-phone"></i>  
+        {{ personatelefono }}
+      </ion-card-subtitle>
+      <ion-card-subtitle *ngIf="personainstagram">
+        <i class="icon-instagram"></i>  
+        {{ personainstagram }}
+      </ion-card-subtitle>
+      <ion-card-subtitle *ngIf="personaemail" >
+        <i class="icon-envelope"></i>  
+        {{ personaemail }}
+      </ion-card-subtitle>
+      <ion-card-subtitle *ngIf="personafacebook">
+        <i class="icon-facebook"></i>  
+        {{ personafacebook }}
+      </ion-card-subtitle>
+      <ion-card-subtitle *ngIf="personatwitter">
+        <i class="icon-twitter"></i>  
+        {{ personatwitter }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-button routerLink="/tabs/mispublicaciones" expand="block" shape="round"> <ion-icon name="planet-sharp"></ion-icon> Mis publicaciones </ion-button>
+    <ion-button routerLink="/tabs/salir" expand="block" shape="round"> <ion-icon name="airplane-sharp"></ion-icon> Salir </ion-button>
+    <ion-button routerLink="/tabs/salir" expand="block" fill="outline" shape="round">Eliminar Cuenta</ion-button>
+  </ion-card>
+
+</ion-content>
