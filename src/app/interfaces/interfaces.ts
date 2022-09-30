@@ -54,3 +54,7 @@ export interface Encuentro{
     fechaAlta: Date,
     fechaBaja: Date | undefined,
 }
+
+export interface Datos{
+    cuerpo: string 
+}
